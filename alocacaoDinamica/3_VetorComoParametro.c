@@ -29,7 +29,7 @@ int main(){
     printarVetor(v,5);
 
     puts("\n");
-    
+
     // dinamico usando calloc 
     int* vh=(int *)calloc(5,sizeof(int));
     puts("### DINAMICO ANTES DO ESCALAR");
@@ -37,6 +37,10 @@ int main(){
     somarComEscalar(vh,5,esc);
     puts("### DINAMICO DEPOIS DO ESCALAR");
     printarVetor(vh,5);    
+
+    // desalocando o vetor dinamico
+    free(vh);
+    vh=NULL;
 
     return 0;
 }
