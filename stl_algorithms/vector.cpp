@@ -67,9 +67,60 @@ int main(){
     //exemplo:
     int a=10, b=20;
     cout<<"\nMaior: "<<max(a,b);
-    cout<<"Menor: "<<min(a,b);
+    cout<<"Menor: "<<min(a,b)<<"\n";
 
-    // 
+    // find: procura um elemento
+    find(v0.begin(),v0.end(),10);
+    
+    // count: conta quantas vezes um valor aparece
+    count(v0.begin(),v0.end(),5);
+
+    // count if: conta quantos elementos satisfazem uma condicao
+    int qtd=count_if(v0.begin(),v0.end(),[](int x){
+        return x>10;  
+    });  // conta quantos elementos sao maiores que 10
+
+    // for each: executa uma operacao em cada elementos
+    for_each(v0.begin(),v0.end(),[](int x){
+        cout<<x<<" ";
+    });
+
+    // all of: verifica se todos satisfazem condicao
+    all_of(v0.begin(),v0.end(),[](int x){
+        return x>0;
+    }); // retorna true se todos forem positivos
+
+    // any of: verifica se pelo menos um satisfaz
+    any_of(v0.begin(),v0.end(),[](int x){
+        return x<0;
+    });
+
+    // none of: verifica se nenhum satisfaz
+    none_of(v0.begin(),v0.end(),[](int x){
+        return x<0;
+    });
+
+    // accumulate: acumular valores
+    vector<int>v={1,1,1};
+    int sum= accumulate(v.begin(),v.end(),0); // soma
+    int prod=accumulate(v.begin(),v.end(),1,multiplies<int>()); // produto
+
+    // iota: preenche sequencia crescente
+    vector<int>vv(5);
+    iota(vv.begin(),vv.end(),1); // util para criar indices
+
+    // lower bound: usado em vetor ordenado, retorna primeiro elemento maior ou igual a x
+    lower_bound(v0.begin(),v0.end(),10); //x=10
+
+    // upper bound: ordenado e retorna o primeiro elemento maior que x 
+    upper_bound(v0.begin(),v0.end(),2);
+
+    
+
+
+
+
+
 
 
     return 0;
