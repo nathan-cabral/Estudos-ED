@@ -115,8 +115,45 @@ int main(){
     // upper bound: ordenado e retorna o primeiro elemento maior que x 
     upper_bound(v0.begin(),v0.end(),2);
 
-    
+    // lowe bound : para posicao
+    auto it=lower_bound(vv.begin(),vv.end(),5);
+    int pos=it-v.begin();
 
+    // binary search : tbm exige ordenacao
+    if(binary_search(v0.begin(),v0.end(),2)){ // retorna so false ou true
+        cout<<"\nexiste\n";
+    }
+    
+    // erase: remover elementos
+    v0.erase(v0.begin()+2);// remove o elemento da pos 2
+    v0.erase(v0.begin()+2,v.begin()+5);// remove o intervalo
+
+    // insert: insere em uma posicao
+    v0.insert(v.begin()+2,10);// posicao 2 insere 10
+
+    // erase+remove: remove todas as ocorrencias de algum numero
+    v0.erase(remove(v0.begin(),v0.end(),5),v0.end()); // remove ocorrencias de 5
+
+    // maximo divisor comum:
+    gcd(a,b);
+    // minimo divisor comum: 
+    lcm(a,b);
+
+    // valor absoluto:
+    abs(-10);
+
+    //pair: tem duas informacoes
+    pair<int,int>p;
+    p.first;
+    p.second;
+
+    pair<int,int>p={20,10};
+
+    //tuple: mais de duas informacoes
+    tuple<int,int,double>t={12,33,2.2};
+    // acessar posicoes
+    get<0>(t);
+    get<1>(t);
 
 
 
