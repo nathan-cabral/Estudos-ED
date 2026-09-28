@@ -4,16 +4,8 @@ using namespace std;
 
 int main(){
 
-    string s;cin>>s;
-    vector<char>v;
-    for(int i=0;i<s.size();i+=2){
-        v[i]=s[i];
-    }
-    sort(v.begin(),v.end());
-    
-    
-
-
-    return 0;
-
+    int x;cin>>x;
+    if(x%5==0)cout<<x/5<<"\n";
+    else if(x<5)cout<<"1\n";
+    else cout<<(x/5)+1<<"\n";
 }
