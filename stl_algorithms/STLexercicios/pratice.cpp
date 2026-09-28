@@ -4,8 +4,11 @@ using namespace std;
 
 int main(){
 
-    int x;cin>>x;
-    if(x%5==0)cout<<x/5<<"\n";
-    else if(x<5)cout<<"1\n";
-    else cout<<(x/5)+1<<"\n";
+    int k,n,w;cin>>k>>n>>w;
+    int tot=k;
+    for(int i=2;i<=w;i++){
+        tot+=i*k;
+    }
+    cout<<max(0,tot-n)<<'\n';
+    return 0;
 }
