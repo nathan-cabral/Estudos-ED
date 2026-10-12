@@ -1,8 +1,11 @@
 #include<stdio.h>
+
 int soma(int a, int b){
     return a+b;
 }
+
 int main(){
+    
     int a=100000000;
     int b=200000000;
     int c=0;
